@@ -14,7 +14,7 @@ const Track = ({ play, playingTrack }:TrackProps) => {
   <div className="flex-1 flex items-center justify-start">
 
     <div className={`${play && 'animate-[spin_3s_linear_infinite]'} hidden sm:block h-16 w-16 mr-4`}>
-      <Image src={playingTrack?.images?.coverart} alt="cover art" className="rounded-full" layout='fill' />
+      <img src={playingTrack?.images?.coverart} alt="cover art" className="rounded-full" layout='fill' />
     </div>
 
     <div>
