@@ -11,6 +11,7 @@ const CurrentTrack = () => {
 
         <div className="relative rounded-full overflow-hidden w-max">
           <Image
+            alt=""
             src={currentTrack?.images?.coverart}
             width={150}
             height={150}

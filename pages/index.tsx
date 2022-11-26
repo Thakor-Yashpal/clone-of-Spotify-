@@ -8,23 +8,13 @@ import Loader from "../components/Loader";
 export default function Home() {
   const router = useRouter();
 
-  const { status, data: session } = useSession({
-    required: true,
-    onUnauthenticated() {
-      router.push("/auth/signin");
-    },
-  });
-
-  useEffect(() => {
-    if (!session) {
-      router.push("/auth/signin");
-    }
-  }, []);
+  const { status, data: session } = useSession();
 
   // Loading animation...
   if (status === "loading") {
     return <Loader />;
   }
+
   return (
     <>
       <Head>

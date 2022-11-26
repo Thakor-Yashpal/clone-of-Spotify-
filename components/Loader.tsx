@@ -8,7 +8,7 @@ function Loader() {
       <div className="pt-40 flex flex-col items-center space-y-4">
         <span className="relative w-[400px] h-[250px] lg:w-[550px] lg:h-[240px]">
           <Image
-            src="https://rb.gy/y9mwtb"
+            src="https://media.discordapp.net/attachments/1011970131112505376/1044514089591918662/Frame_1.png?width=738&height=311"
             layout="fill"
             objectFit="contain"
             className="animate-pulse"

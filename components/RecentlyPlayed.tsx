@@ -1,3 +1,4 @@
+import Image from "next/legacy/image";
 import { useContext } from "react";
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -26,12 +27,15 @@ function RecentlyPlayed({ track, playlist, button }: RecentlyPlayedprops) {
 
   return (
     <div className="flex items-center space-x-3 px-2 py-1" onClick={handlePlay}>
-      <div className="flex w-5/6 gap-3 items-center ">
-        <img
-          src={track.images.coverart}
-          alt=""
-          className="rounded-full w-[52px] h-[52px]"
-        />
+      <div className="flex w-5/6 gap-3 items-center">
+        <div className="w-[52px] h-[52px] relative">
+          <Image
+            src={track.images.coverart}
+            alt=""
+            className="rounded-full "
+            layout="fill"
+          />
+        </div>
         <div className="flex-grow flex flex-col ">
           <h4 className="text-white text-[13px] mb-0.5 font-semibold hover:underline cursor-pointer truncate max-w-[150px]">
             {track.title}
